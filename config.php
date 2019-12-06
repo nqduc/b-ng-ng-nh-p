@@ -3,7 +3,7 @@
    session_start();
    
    if(!isset($_SESSION['user']) && $_SESSION['pass']){
-    // var_dump($_SESSION);
+    var_dump($_SESSION);
     echo "Thành Công";
 
 //    $user_check = $_SESSION['login_user'];

@@ -13,8 +13,5 @@
     } else {
         echo "Không Thành Công";
     }
-
-    // if(session_destroy(){
-    header ("location: login.php");
-    // };
+    header ("location: config.php");
 ?>
