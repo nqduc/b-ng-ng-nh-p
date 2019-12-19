@@ -1,17 +1,55 @@
 <?php 
+    include "mysql.php";
     session_start();
-    $username = $_POST['name'];
-    
+    $username = $_POST['name'];   
     $pass = $_POST['pass'];
     
-    if ($username == "anhduc" and $pass == "123456"){
-        echo "Thành Công";
-        $_SESSION [ 'use'] = $username;
-        $_SESSION['pass'] = $pass;
-        var_dump($_SESSION);
-        die();
-    } else {
-        echo "Không Thành Công";
+ 
+    if ($username == "" || $pass == ""){
+        echo "không đăng nhập được";
+    } else{
+        $conn1 = new DBconn();
+        $conn1->connect();
+        $table = "dang_nhap";
+        $where = "name = '$username' && password = '$pass'";
+        $rows = $conn1->select($table,$where);
+        // var_dump($rows);
+        // die;
     }
-    header ("location: config.php");
+     if(empty($rows)){
+         header("location: dangnhap.php");
+     }else{
+         $_SESSION['id'] = $rows['id'];
+         header("location: cv.php");
+     }
+
+    // if ($username != null && $pass != null){
+    //     $table= 'dang_nhap';
+    //     $where = "email ='" . $username . "' AND password ='".$pass."'";
+    //     // var_dump($where);
+    //     echo "Bạn đã đăng nhập Thành Công";
+    //     $rows = $conn1->select($table, $where);
+    //     header ("location: cv.php");
+    //     var_dump($rows);
+    //     die();
+    
+    // }
+
+   
+//         $_SESSION ['user'] = $username;
+//         $_SESSION['pass'] = $pass;
+//         echo "Bạn đã đăng nhập Thành Công";
+//         // header ("location: config.php");
+//         var_dump($_SESSION);
+//         die();
+    // }else {
+    //     echo "Đăng nhập tài khoản thất bại";
+    //     $_SESSION ['error'] =  "Đăng nhập tài khoản thất bại";
+    //     var_dump($_SESSION);
+    //     die();
+    //     header ("location: dangnhap.php");
+    // } 
+// 
+
+
 ?>

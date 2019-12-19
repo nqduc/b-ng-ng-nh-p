@@ -1,10 +1,20 @@
 <?php
-//    include('config.php');
    session_start();
-   
-   if(!isset($_SESSION['user']) && $_SESSION['pass']){
-    var_dump($_SESSION);
-    echo "Thành Công";
+   if(isset($_SESSION['user_id']) && $_SESSION['id']!= NULL){
+    // var_dump($_SESSION);
+    echo "chúc các bạn một ngày tốt lành";
+    header ("location: cv.php");
+
+?>
+<!-- <a href="logout.php">Đăng Xuất</a> -->
+<?php 
+}
+?>
+<!--  
+    // $_SESSION ["user"] ="";
+    // session_destroy();
+    // var_dump($_SESSION);
+    // echo "Việt Nam chiến thắng";
 
 //    $user_check = $_SESSION['login_user'];
    
@@ -18,5 +28,5 @@
 //        var_dump($_SESSION);
 //       header("location:login.php");
 //       die();
-   }
-?>
+
+?> -->
