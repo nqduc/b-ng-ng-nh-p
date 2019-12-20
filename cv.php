@@ -238,5 +238,4 @@ $duc->set_awards($awards);
         
     </form>
 </body>
-<!-- <a href="logout.php">Đăng Xuất</a> -->
 </html>

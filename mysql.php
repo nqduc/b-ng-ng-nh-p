@@ -60,8 +60,6 @@ class DBconn {
         // die;
         $select =$this->conn->query($mysql);
         $rows = mysqli_fetch_assoc($select);
-        // var_dump($select);
-        // die;
         if ($select){
             echo "";
         }else {

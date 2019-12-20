@@ -23,19 +23,6 @@
          header("location: cv.php");
      }
 
-    // if ($username != null && $pass != null){
-    //     $table= 'dang_nhap';
-    //     $where = "email ='" . $username . "' AND password ='".$pass."'";
-    //     // var_dump($where);
-    //     echo "Bạn đã đăng nhập Thành Công";
-    //     $rows = $conn1->select($table, $where);
-    //     header ("location: cv.php");
-    //     var_dump($rows);
-    //     die();
-    
-    // }
-
-   
 //         $_SESSION ['user'] = $username;
 //         $_SESSION['pass'] = $pass;
 //         echo "Bạn đã đăng nhập Thành Công";
