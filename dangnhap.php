@@ -10,7 +10,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel = "stylesheet" type = "text/css" href = "abc.css">
+<link rel = "stylesheet" type = "text/css" href = "background.css">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -21,7 +21,7 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<center><h3><p class="text-warning"> Đăng Nhập</p></h3></center>
+				<h3><p class="text-warning">Đăng Nhập</p></h3>
 			</div>
 			<div class="card-body">
 				<form method = "post" action = "login.php" >
@@ -53,7 +53,6 @@
 			</div>
 		</div>
 	</div>
-</div>
-
+	</div>
 </body>
 </html>

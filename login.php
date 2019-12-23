@@ -13,30 +13,14 @@
         $table = "dang_nhap";
         $where = "name = '$username' && password = '$pass'";
         $rows = $conn1->select($table,$where);
-        // var_dump($rows);
-        // die;
+      
     }
-     if(empty($rows)){
-         header("location: dangnhap.php");
-     }else{
-         $_SESSION['id'] = $rows['id'];
-         header("location: cv.php");
-     }
+    if(empty($rows)){
+    header("location: dangnhap.php");
+    echo "Đăng nhập tài khoản thất bại";
 
-//         $_SESSION ['user'] = $username;
-//         $_SESSION['pass'] = $pass;
-//         echo "Bạn đã đăng nhập Thành Công";
-//         // header ("location: config.php");
-//         var_dump($_SESSION);
-//         die();
-    // }else {
-    //     echo "Đăng nhập tài khoản thất bại";
-    //     $_SESSION ['error'] =  "Đăng nhập tài khoản thất bại";
-    //     var_dump($_SESSION);
-    //     die();
-    //     header ("location: dangnhap.php");
-    // } 
-// 
-
-
+    }else{
+    $_SESSION['id'] = $rows['id'];
+    header("location: cv.php");
+    }
 ?>

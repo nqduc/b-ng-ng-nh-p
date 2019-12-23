@@ -33,21 +33,9 @@ $profile = [
 ];
 $duc->set_profile($profile);
 
-// $user_duc = [
-//     "phone1" => "+84565101365",
-//     "phone2" => "+84921222745",
-//     "email1" => "n.q.duc@wbs-v.biz"
-// ];
-
-
-// $table3="user";
-// $where3 ="user_id = ".$_SESSION['id'];
-// $user =$conn1->select($table3, $where3);
-// $duc->set_user($user);
-
 
 $table = "skills";
-$where ="user_id = ".$_SESSION['id'];
+$where ="user_id = " . $_SESSION['id'];
 $skills = $conn1->select1($table, $where);
 $duc->set_skills($skills);
 
@@ -55,12 +43,6 @@ $duc->set_skills($skills);
 $table = "referen";
 $where="user_id =".$_SESSION['id'];
 $reperences = $conn1->select1($table,$where);
-// echo "<pre>";
-// // var_dump($reperences);
-// foreach($reperences as $value){
-// }
-// // echo "<pre>";
-// die;
 $duc->set_reperences($reperences);
 
 
@@ -84,6 +66,11 @@ $duc->set_awards($awards);
 </head>
 
 <body style="margin-top: 40px; margin-bottom: 40px; width: 1100px; margin-left: 50px; margin-right: 50px;">
+
+<form method = "post" action = "logout.php">
+        <input type = "submit" value = "logout"/>
+        
+    </form>
     <header class="container" style="margin-top: 40px; margin-bottom: 15px; margin-right: 40px; margin-left: 40px;">
         <div class="row">
             <div class="col-lg-7">
@@ -186,15 +173,13 @@ $duc->set_awards($awards);
             <div class="abc">
                 <h3>SKILLS</h3>
                 <div>
-                    <div>
-                        <?php foreach ($skills as $value) { ?>
-                            <h7><?php echo $value ['skills'] ?></h7>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" style ="width: <?= $value['lever'].'%'; ?>">
-                                </div>
+                    <?php foreach ($skills as $value) { ?>
+                        <h7><?php echo $value ['skills'] ?></h7>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style ="width: <?= $value['lever'].'%'; ?>">
                             </div>
-                        <?php } ?>
-                    </div>
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -233,9 +218,6 @@ $duc->set_awards($awards);
             </div>
 
         </footer>
-        <form method = "post" action = "logout.php">
-        <input type = "submit" value = "logout"/>
-        
-    </form>
 </body>
 </html>
+
