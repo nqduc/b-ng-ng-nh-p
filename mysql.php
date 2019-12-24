@@ -24,7 +24,7 @@ class DBconn {
    }
 
    function insert ($table, $column, $values){
-       $mysql= "INSERT INTO $table $column VALUES $values;";
+       $mysql= "INSERT INTO $table ($column) VALUES ($values);";
        $insert = $this->conn->query($mysql);
        if ( $insert === TRUE ){
         echo "insert successful";
@@ -56,16 +56,11 @@ class DBconn {
 
     function select ($table, $where){
         $mysql = "SELECT * FROM $table WHERE $where;";
-        // var_dump($mysql);
-        // die;
         $select =$this->conn->query($mysql);
         $rows = mysqli_fetch_assoc($select);
         if ($select){
             echo "";
         }else {
-            // echo "<pre>";
-            // var_dump($this->conn);
-            // die;
             echo "error:" .$this->conn->error;
         }
         return $rows;
@@ -73,29 +68,26 @@ class DBconn {
 
     function select1 ($table, $where){
         $mysql = "SELECT * FROM $table WHERE $where;";
-        // var_dump($mysql);
-        // die;
         $select =$this->conn->query($mysql);
         // $rows = mysqli_fetch_assoc($select);
         return $select;
     }  
 }
 
-    $conn1 = new DBconn();
-    $conn1 ->connect();
-    // var_dump ($conn1->conn); 
-    $table= 'references';
-    $column="(name, phone, email)";
-    $values ="(Name of Refrance, 0921222745, QuangĐức@gmail.com)";
+    // $conn1 = new DBconn();
+    // $conn1 ->connect();
+    // $table= 'references';
+    // $column="(name, phone, email)";
+    // $values ="(Name of Refrance, 0921222745, QuangĐức@gmail.com)";
     
 
     // $conn1 = new DBconn();
     // $conn1 ->connect();
-    // var_dump($conn1->conn); 
-    // $table1= "dang_nhap";
-    // $column1="(name)";
-    // $value1="(duc)";
-    // $conn1->select($table1 ,$column1 ,$value1);
+    // // var_dump($conn1->conn); 
+    // $table= "dang_nhap";
+    // $column="(name, pass)";
+    // $value="(anhduc372, 123456)";
+    // $conn1->insert($table ,$column ,$value);
     
     // $condition= "id = 22 or id = 23 or id = 26";
     // $conn1->delete($table1,$condition);
