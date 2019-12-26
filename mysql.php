@@ -44,8 +44,8 @@ class DBconn {
         }
     }
 
-    function update($table, $column3, $values3) {
-        $mysql= "UPDATE $table SET $column3 = $values3;";
+    function update($table, $column, $values, $where) {
+        $mysql= "UPDATE $table SET $column = '$values' where $where ;";
         $update =$this->conn->query($mysql);
         if ($update === TRUE){
         echo "update successful";

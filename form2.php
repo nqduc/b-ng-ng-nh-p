@@ -2,7 +2,7 @@
     <head>
     </head>
     <body>
-    <form action="insert.php" method="post">
+    <form action="update.php" method="post">
         <table>
             <tr>
                 <th>ID:</th>

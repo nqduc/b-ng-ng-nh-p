@@ -7,9 +7,7 @@
         $conn1 = new DBconn();
         $conn1->connect();
         $table = "dang_nhap";
-        $column = "name";
-        $value = "$username";
-        $where = "id = $id";
-        $conn1->update($table, $column, $value,$where);
-       
+        $condition = "id = $id";
+        $conn1->delete($table , $condition);
+
 ?>
