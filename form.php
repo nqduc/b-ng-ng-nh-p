@@ -3,10 +3,6 @@
         <form action="insert.php" method="post">
             <table>
                 <tr>
-                    <th>ID:</th>
-                    <td><input type="id" placeholder="id" name = "id"></td>
-                </tr>
-                <tr>
                     <th>Name:</th>
                     <td><input type="name" placeholder="name" name = "name"></td>
                 </tr>
@@ -17,6 +13,10 @@
                 <tr>
                     <th>Password</th>
                     <th><input type="password" placeholder="password" name = "pass"></th>
+                </tr>
+                <tr>
+                    <th>Img</th>
+                    <th><input type="img" placeholder="img" name = "img"></th>
                 </tr>
                 <tr>
                     <th>Fullname</th>
@@ -34,8 +34,8 @@
                     <th>Phone2</th>
                     <th><input type="phone2" placeholder="phone2" name = "phone2"></th>
                 </tr>
-                <button type="submit">Kết Nối</button>
             </table>
+            <button type="submit">Kết Nối</button>
         </form>    
     </body>
 </html>

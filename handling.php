@@ -14,7 +14,7 @@
         $rows = $conn1->select($table,$where);
     }
     if(empty($rows)){
-    header("location: dangnhap.php");
+    header("location: login.php");
     echo "Đăng nhập tài khoản thất bại";
     }else{
     $_SESSION['id'] = $rows['id'];

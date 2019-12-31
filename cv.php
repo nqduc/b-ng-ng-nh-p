@@ -26,11 +26,7 @@ $where ="user_id = ".$_SESSION['id'];
 $education = $conn1->select1($table, $where);
 $duc->set_education($education);
 
-$profile = [
-    [
-        "content" => "It is a long established fact that a reader will be distracted by the readable content of a page It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that"
-    ],
-];
+$profile = "It is a long established fact that a reader will be distracted by the readable content of a page It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that";
 $duc->set_profile($profile);
 
 
@@ -67,10 +63,6 @@ $duc->set_awards($awards);
 
 <body style="margin-top: 40px; margin-bottom: 40px; width: 1100px; margin-left: 50px; margin-right: 50px;">
 
-<form method = "post" action = "logout.php">
-        <input type = "submit" value = "logout"/>
-        
-    </form>
     <header class="container" style="margin-top: 40px; margin-bottom: 15px; margin-right: 40px; margin-left: 40px;">
         <div class="row">
             <div class="col-lg-7">
@@ -92,6 +84,23 @@ $duc->set_awards($awards);
                 </div>
             </div>
             <div class="col-lg-5 flex-column ml-auto">
+                <div class="d-flex flex-row-reverse ">
+                    <div class="p-2 bg-info">
+                        <form method = "post" action = "logout.php">
+                            <input type = "submit" value = "logout"/>
+                        </form>
+                    </div>
+                    <div class="p-2 bg-warning">
+                        <form method = "post" action = "form2.php">
+                            <input type = "submit" value = "Update"/>
+                        </form>
+                    </div>
+                    <div class="p-2 bg-primary">
+                        <form method = "post" action = "delete.php">
+                            <input type = "submit" value = "Delete"/>
+                        </form>
+                    </div>
+                </div>  
                 <div class="row">
                     <div class="col-sm-2">
                         <i class="fas fa-phone-square" style="font-size: 30px;"></i>
@@ -166,9 +175,9 @@ $duc->set_awards($awards);
             </div>
         </div>
         <div class="col-lg-5 flex-column">
-            <div class ="hamho">
+            <div class = "cock">
                 <h3>Profle</h3>
-                <p><?php echo "" . $value["content"] ?></p>
+                <p><?php echo $duc->get_profile($profile); ?></p>
             </div>
             <div class="abc">
                 <h3>SKILLS</h3>
@@ -216,8 +225,8 @@ $duc->set_awards($awards);
                     <img src="anh.jpg" class="rounded float-left can-img">
                 </div>
             </div>
+        </footer>     
 
-        </footer>
 </body>
 </html>
 

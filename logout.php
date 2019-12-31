@@ -3,6 +3,6 @@ session_start();
 if(isset($_SESSION['id'])){
 
     unset($_SESSION['id']);
-    header ("location: dangnhap.php");
+    header ("location: login.php");
 }
 ?>
