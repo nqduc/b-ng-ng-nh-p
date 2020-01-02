@@ -8,10 +8,10 @@
         $condition = "id = $id";
         $delete = $conn1->delete($table , $condition);
 
-        if ($delete == TRUE){
+        if ($delete == TRUE) {
             header("location: login.php");
             unset($_SESSION['id']);
-        }else {
+        } else {
             header("location: delete.php");
         }
 ?>

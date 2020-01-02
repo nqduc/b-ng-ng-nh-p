@@ -15,9 +15,9 @@
     $value ="('$username'), ('$email'), ('$password'), ('$fullname'), ('$address'), ('$phone1'), ('$phone2')";
     $insert = $conn1->insert($table ,$column ,$value);
     
-    if(empty($insert)){
+    if(empty($insert)) {
         header("location: insert.php");
-        }else{
+        } else {
         echo "Đăng nhập thành công";
         header("location: login.php");
         }
