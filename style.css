@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(247, 230, 233) !important;
+    height:1269px;
+}
+.col-md-7 {
+    position: absolute;
+    width: 330px;
+    height: 30px;
+    right:40px;
+    top: 120px;
+}
+.col-sm-2 {
+    color: hotpink !important;
+}
+.namae-img {
+    border: 5px solid hotpink;
+}
+h3 {
+    border-left:10px solid hotpink;
+    scroll-padding-right: 10px;
+    height:28px;
+}
+.can-img {
+    width: 300px;
+    height: 250px;
+}
+.abc {
+     padding-top: 40px;
+     margin-left: 37px;
+}
+.col-xl-4 {
+    padding-left: 70px;
+    margin-left: 50px;
+}
+.cock {
+    margin-right: 75px;
+    padding : 50px;
+}
